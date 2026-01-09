@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TechFlow - Task Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9; }
+        .kanban-board { display: flex; gap: 20px; }
+        .column { background: #ebedf0; border-radius: 5px; width: 300px; padding: 10px; min-height: 400px; }
+        .card { background: white; padding: 10px; margin-bottom: 10px; border-radius: 3px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .priority-Alta { border-left: 5px solid red; }
+        .priority-Média { border-left: 5px solid orange; }
+        form { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Logística TechFlow - Gestão Ágil</h1>
+
+    <form action="/add" method="POST">
+        <input type="text" name="title" placeholder="Título da Carga" required>
+        <input type="text" name="description" placeholder="Descrição">
+        <select name="priority">
+            <option value="Baixa">Baixa</option>
+            <option value="Média" selected>Média</option>
+            <option value="Alta">Alta</option>
+        </select>
+        <button type="submit">Adicionar Tarefa</button>
+    </form>
+
+    <div class="kanban-board">
+        {% for status in ["A Fazer", "Em Progresso", "Concluído"] %}
+        <div class="column">
+            <h3>{{ status }}</h3>
+            {% for task in tasks if task.status == status %}
+            <div class="card priority-{{ task.priority }}">
+                <strong>{{ task.title }}</strong><br>
+                <small>{{ task.description }}</small><br>
+                
+                {% if status != "Concluído" %}
+                <a href="/update/{{ task.id }}">Avançar >></a> |
+                {% endif %}
+                <a href="/delete/{{ task.id }}" style="color: red;">Excluir</a>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+ 
+

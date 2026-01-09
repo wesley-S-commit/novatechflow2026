@@ -34,4 +34,4 @@ exibir configuração visual apos envio do formulario
 -desenvolvimento issues para criação fechadas ao implantar
 -qualidade issues para testar fechadas apos validação no github actions
 -historia commits estruturadoos com conventional commits
--mudanças registros neste readme e no kanban
+-mudanças registros neste readme e no kanban.
