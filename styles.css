@@ -1,0 +1,116 @@
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --todo-color: #d1d8e0;
+    --progress-color: #fae1a5;
+    --done-color: #c8e6c9;
+    --high-priority: #e74c3c;
+    --medium-priority: #f39c12;
+    --low-priority: #3498db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Estilo do Formulário */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Quadro Kanban */
+.kanban-board {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    background-color: #ebedf0;
+    border-radius: 8px;
+    width: 320px;
+    min-height: 500px;
+    padding: 15px;
+}
+
+.column h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Estilo dos Cards de Tarefa */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Indicadores de Prioridade */
+.priority-Alta { border-left: 6px solid var(--high-priority); }
+.priority-Média { border-left: 6px solid var(--medium-priority); }
+.priority-Baixa { border-left: 6px solid var(--low-priority); }
+
+.card strong { display: block; margin-bottom: 5px; font-size: 1.1em; }
+.card p { font-size: 0.9em; color: #666; margin: 5px 0; }
+
+.actions {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.actions a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.actions .delete { color: #c0392b; margin-left: 10px; }
