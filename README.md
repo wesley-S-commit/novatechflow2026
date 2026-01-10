@@ -35,3 +35,20 @@ exibir configuração visual apos envio do formulario
 -qualidade issues para testar fechadas apos validação no github actions
 -historia commits estruturadoos com conventional commits
 -mudanças registros neste readme e no kanban.
+
+##gestão de mudanças
+
+Título: Relatório de Gestão de Mudanças - TechFlow Solutions 
+
+
+Cenário Inicial: O projeto previa um CRUD básico de tarefas para a startup de logística, focado em título, descrição e status.
+
+
+A Mudança: Após a primeira Sprint, identificou-se a necessidade de gerenciar o nível de urgência das entregas para otimizar a frota. Foi implementada a funcionalidade de Priorização de Tarefas (Baixa, Média, Alta).
++2
+
+Impacto no Projeto: * Kanban: Adição de um novo card no quadro "To Do" para implementar o campo de prioridade. * Código: Atualização da classe Task e da interface visual para suportar e exibir o novo atributo. * Qualidade: Criação de testes unitários específicos para validar se a prioridade "Média" é atribuída por padrão.
++4
+
+
+Justificativa Ágil: Essa alteração reflete a flexibilidade do framework Kanban, permitindo que a TechFlow Solutions entregue uma ferramenta que realmente atenda à dor da startup: a necessidade de identificar o que deve ser transportado primeiro
