@@ -1,0 +1,11 @@
+name: Validação de Código
+
+on:[push, pull_request}
+
+jobs:
+lint:
+runs-on: ubutu-latest
+steps:
+-uses:actions/checkout@v3
+name: install -g htmlhint
+-name:validar htmlhintrun: htmlhint index.html]
