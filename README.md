@@ -26,7 +26,7 @@ antes da criação das issuues, foi realizada uma entrevista inicial com cliente
 exibir configuração visual apos envio do formulario  
 
 # tecnologias
--html, css3, javascript (vanilla)
+-html, python,css3, javascript (vanilla)
 
 # gestão do projeto
 -metodologia kanban via github projects
